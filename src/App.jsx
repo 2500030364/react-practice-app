@@ -5,16 +5,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 */
 
-import AdminLogin from "./pages/AdminLogin"
-import Registration from "./pages/Registration"
+import { BrowserRouter } from "react-router-dom"
+import NavBar from "./pages/NavBar"
 
 function App() {
 
   return (
     <div>
-      <Registration/>
-      
-      <AdminLogin/>
+      <BrowserRouter>
+      <NavBar/>
+      </BrowserRouter>
     </div>
   )
 }

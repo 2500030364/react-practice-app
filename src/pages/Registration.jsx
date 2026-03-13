@@ -42,9 +42,7 @@ const  Registration = () =>
             email: '',
             password: '',
         });
-
     };
-
 
   return (
     <div>
@@ -88,6 +86,4 @@ const  Registration = () =>
     </div>
   )
 }
-
-
 export default Registration;

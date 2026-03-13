@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminLogin() 
 {
+    const navigate = useNavigate();
     const[formData, setFormData] = useState({
         username: '',
         password: '',
@@ -40,7 +42,7 @@ export default function AdminLogin()
                     password:'',
                 })
 
-                window.location.href = '/'
+                navigate('/admin')
             } else {
                 setError('Invalid username or password')
                 console.log('Invalid credentials')
@@ -52,7 +54,6 @@ export default function AdminLogin()
         <h1>  Admin Login </h1>
         {error && <div>{error}</div>}
         <form onSubmit={handleSubmit}>
-
             <div>
                 <label>  Username  </label>
                 <input  type='text' name='username'
@@ -60,7 +61,6 @@ export default function AdminLogin()
                 required placeholder=' Enter your username  '
                 />
             </div>
-
             <div>
                 <label>  Password  </label>
                 <input type='password' name='password'
@@ -68,7 +68,6 @@ export default function AdminLogin()
                 required placeholder='Enter your password'
                 />
             </div>
-
             <button type='submit'>  Login  </button>
         </form>
     </div>
