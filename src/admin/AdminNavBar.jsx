@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
-import Fetch from './Fetch'
 import AdminLogout from './AdminLogout'
 import Home from './Home'
 import Applications from './Applications'
+import Fetch from './fetch';
 
 export default function AdminNavBar() 
 {
